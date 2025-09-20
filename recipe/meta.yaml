@@ -1,4 +1,4 @@
-{% set version = '1.2.1' %}
+{% set version = "1.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/celltrackR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/celltrackR/celltrackR_{{ version }}.tar.gz
-  sha256: 46aa9c5c0042a31889703b891a8a8c36f95fdb37f70a862b9a39b0a193eead3e
+  sha256: b2dcdf1acebb4ecedec83fa9f7c8dd7c703d59741390ca42d4edd6cdac6e2583
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -43,19 +43,10 @@ test:
 about:
   home: http://www.motilitylab.net
   license: GPL-2.0-only
-  summary: 'Methods for analyzing (cell) motion in two or three dimensions. Available measures
-    include displacement, confinement ratio, autocorrelation, straightness, turning
-    angle, and fractal dimension. Measures can be applied to entire tracks, steps, or
-    subtracks with varying length. While the methodology has been developed for cell
-    trajectory analysis, it is applicable to anything that moves including animals,
-    people, or vehicles. Some of the methodology implemented in this packages was described
-    by: Beauchemin, Dixit, and Perelson (2007) <doi:10.4049/jimmunol.178.9.5505>, Beltman,
-    Maree, and de Boer (2009) <doi:10.1038/nri2638>, Gneiting and Schlather (2004) <doi:10.1137/S0036144501394387>,
-    Mokhtari, Mech, Zitzmann, Hasenberg, Gunzer, and Figge (2013) <doi:10.1371/journal.pone.0080808>,
-    Moreau, Lemaitre, Terriac, Azar, Piel, Lennon-Dumenil, and Bousso (2012) <doi:10.1016/j.immuni.2012.05.014>,
-    Textor, Peixoto, Henrickson, Sinn, von Andrian, and Westermann (2011) <doi:10.1073/pnas.1102288108>,
-    Textor, Sinn, and de Boer (2013) <doi:10.1186/1471-2105-14-S6-S10>, Textor, Henrickson,
-    Mandl, von Andrian, Westermann, de Boer, and Beltman (2014) <doi:10.1371/journal.pcbi.1003752>.'
+  summary: 'Methods for analyzing (cell) motion in two or three dimensions. Available measures include displacement, confinement ratio, autocorrelation, straightness, turning angle, and fractal dimension. Measures can be applied to entire tracks, steps, or subtracks with varying length. While the methodology has been developed
+    for cell trajectory analysis, it is applicable to anything that moves including animals, people, or vehicles. Some of the methodology implemented in this packages was described by: Beauchemin, Dixit, and Perelson (2007) <doi:10.4049/jimmunol.178.9.5505>, Beltman, Maree, and de Boer (2009) <doi:10.1038/nri2638>, Gneiting
+    and Schlather (2004) <doi:10.1137/S0036144501394387>, Mokhtari, Mech, Zitzmann, Hasenberg, Gunzer, and Figge (2013) <doi:10.1371/journal.pone.0080808>, Moreau, Lemaitre, Terriac, Azar, Piel, Lennon-Dumenil, and Bousso (2012) <doi:10.1016/j.immuni.2012.05.014>, Textor, Peixoto, Henrickson, Sinn, von Andrian, and Westermann
+    (2011) <doi:10.1073/pnas.1102288108>, Textor, Sinn, and de Boer (2013) <doi:10.1186/1471-2105-14-S6-S10>, Textor, Henrickson, Mandl, von Andrian, Westermann, de Boer, and Beltman (2014) <doi:10.1371/journal.pcbi.1003752>.'
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
